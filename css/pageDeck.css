@@ -1,0 +1,163 @@
+@charset "UTF-8";
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+.ul-box {
+    user-select: none;
+}
+.ul-box>li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #345678;
+    border-radius: 3px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease
+}
+
+.ul-box li.page-item-active {
+    background: #f60;
+    color: black;
+}
+
+.ul-box li.page-item:hover {
+    transform: scale(1.02);
+}
+
+.ul-box li.pre-page:hover {
+    transform: scale(1.02);
+}
+
+.ul-box li.forbidden_btn {
+    cursor: no-drop;
+    background: #666666;
+}
+
+.ul-box li.forbidden_btn:hover {
+    cursor: no-drop;
+    transform: scale(1) !important;
+}
+.ul-box li.page-omit{
+    background: #ffffff;
+    color: #345678;
+}
+.ul-box li.page-size-part{
+    width: 90px;
+    background:transparent;
+    color: #333333;
+}
+/* 下拉列表 */
+.page-size-box {
+    height: 38px;
+    border: 1px solid #eeeeee;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 40px;
+    position: relative;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    outline: none;
+}
+
+.page-size-box:hover {
+    border: 1px solid #789fff;
+}
+
+.select-option-show {
+    border: 1px solid #789fff;
+    box-shadow: 0px 0px 5px #789fff;
+    -ms-box-shadow: 0px 0px 5px #789fff;
+}
+
+.page-size-box.select-option-show .select-option {
+    visibility: visible;
+    opacity: 1;
+}
+
+.page-size-box .select-option {
+    position: absolute;
+    border: 1px solid #eeeeee;
+    width: 100%;
+    margin-left: -1px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 5px #eeeeee;
+    -ms-box-shadow: 0px 0px 5px #eeeeee;
+}
+
+.page-size-box .select-option .select-option-ul>li {
+    padding-right: 10px;
+}
+
+.page-size-box .select-option .select-option-ul>li:hover {
+    background: #dddfff;
+}
+
+.page-size-box .select-text {
+    padding-right: 10px;
+}
+
+.page-size-box .select-tria {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    height: 0px;
+    vertical-align: middle;
+    border-width: 5px;
+    border-color: #333333 transparent transparent transparent;
+    border-style: solid;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transform-origin:50% 2px;
+    -ms-transform-origin:50% 2px;
+}
+.select-option-show .select-tria {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    
+}
+.page-size-box .select-option-active{
+    background: #eeeeee;
+}
+
+/* 快速跳转 */
+.ul-box li.page-jumper-box{
+    width: 110px;
+    background:transparent;
+    cursor: default;
+    color:#333333;
+}
+.ul-box .jumper_text{
+    width: 40px;
+    border: 1px solid #eeeeee;
+    height: 38px;
+    margin: 0 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+    line-height: 38px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.ul-box .jumper_text:focus{
+    border: 1px solid #789fff;
+    box-shadow: 0px 0px 3px #778899;
+}
+.ul-box .jumper_text.jumper_text_error{
+    border: 1px solid red;
+}

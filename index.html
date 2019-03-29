@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/pageDeck.css">
+    <title>分页</title>
+    <style>
+        html,
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #demo {
+            width: 900px;
+            margin: 100px auto;
+        }
+        #lis {
+            width: 700px;
+            margin: 100px auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="lis"></div>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/pageDeck.js"></script>
+    <script>
+        var dom = new PageDeck({
+            ele: '#demo',
+            total: 255,
+            pitch: 1,
+            pageNum:20,
+            showChangeSize:true,
+            pageSizeOptions:[10,20,30,40],
+            showQuickJumper:true,
+            onPageChange:function(as,fr){
+                console.log(as,fr)
+            },
+            onSizeChange:function(al,gl){
+                console.log(al,gl)
+            }
+        });
+        var lis = new PageDeck({
+            ele: '#lis',
+            total: 7,
+            pitch: 1,
+            showOnePage:true,
+            // sideBtn:false,
+            showChangeSize:true,
+            pageSizeOptions:[5,20,30,40],
+            onPageChange:function(as,fr){
+                console.log(as,fr)
+            }
+        });
+    </script>
+</body>
+
+</html>
